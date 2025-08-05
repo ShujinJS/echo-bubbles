@@ -1,34 +1,21 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  chatInput: {
-    minWidth: 100,
-    minHeight: 75,
-    padding: 20,
-    // alignSelf: "flex-start", // depends the sender
+  chatInputContainer: {
+    width: "80%",
+    flexDirection: "row",
+    alignSelf: "center",
+    justifyContent: "space-between",
   },
-  chatMessageWrapper: {
-    paddingVertical: 5,
-    paddingHorizontal: 10,
-    // marginLeft: 20, // depends the sender
-    borderWidth: 1,
+  chatInput: {
+    width: "80%",
+    padding: 5,
+    borderWidth: 2,
     borderRadius: 20,
   },
-  chatMessage: {
-    fontSize: 16,
-    padding: 10,
-  },
-  senderWrapper: {
-    // flexDirection: "row", // depends the sender
-    alignItems: "center",
-    marginBottom: 15,
-  },
-  senderImage: {
-    width: 35,
-    height: 35,
-    borderRadius: "5em",
-  },
-  senderName: {
-    marginLeft: 10,
+  sendBtn: {
+    width: "15%",
+    borderWidth: 2,
+    borderRadius: 30,
   },
 });
