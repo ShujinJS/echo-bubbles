@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   chatInputContainer: {
     width: "80%",
+    marginVertical: 20,
     flexDirection: "row",
     alignSelf: "center",
     justifyContent: "space-between",
@@ -16,6 +17,6 @@ export const styles = StyleSheet.create({
   sendBtn: {
     width: "15%",
     borderWidth: 2,
-    borderRadius: 30,
+    borderRadius: 40,
   },
 });
