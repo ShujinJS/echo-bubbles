@@ -42,9 +42,7 @@ export function ThemedChatBox({
         </Text>
       </View>
       <ThemedView style={styles(isSenderUser).chatMessageWrapper}>
-        <Text style={[{ color }, styles(isSenderUser).chatMessage]}>
-          {message}
-        </Text>
+        <Text style={[styles(isSenderUser).chatMessage]}>{message}</Text>
       </ThemedView>
     </View>
   );

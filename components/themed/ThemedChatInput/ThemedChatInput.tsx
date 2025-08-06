@@ -1,6 +1,6 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { useState } from "react";
-import { Pressable, SafeAreaView, Text, TextInput } from "react-native";
+import { Pressable, SafeAreaView, Text, TextInput, View } from "react-native";
 import { styles } from "./style";
 
 export interface ThemedChatInputProps {
@@ -21,15 +21,17 @@ export function ThemedChatInput({
 
   return (
     <SafeAreaView style={styles.chatInputContainer}>
-      <TextInput
-        style={[{ color }, styles.chatInput]}
-        value={inputText}
-        onChangeText={setInputText}
-        placeholder="place"
-      />
-      <Pressable style={styles.sendBtn} onPress={handleSendMessage}>
-        <Text>send</Text>
-      </Pressable>
+      <View style={styles.chatInputWrapper}>
+        <TextInput
+          style={[{ color }, styles.chatInput]}
+          value={inputText}
+          onChangeText={setInputText}
+          placeholder="..."
+        />
+        <Pressable style={styles.sendBtn} onPress={handleSendMessage}>
+          <Text style={styles.sendBtnIcon}>+</Text>
+        </Pressable>
+      </View>
     </SafeAreaView>
   );
 }

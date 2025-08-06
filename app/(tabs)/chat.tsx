@@ -1,5 +1,6 @@
 import { ThemedChatBox } from "@/components/themed/ThemedChatBox/ThemedChatBox";
 import { ThemedChatInput } from "@/components/themed/ThemedChatInput/ThemedChatInput";
+import ThemedChatSender from "@/components/themed/ThemedChatSender/ThemedChatSender";
 import {
   FlatList,
   KeyboardAvoidingView,
@@ -76,6 +77,7 @@ export default function ChatScreen() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
+        <ThemedChatSender />
         <KeyboardAvoidingView
           style={{ flex: 1 }}
           behavior={Platform.OS === "ios" ? "padding" : "height"}
