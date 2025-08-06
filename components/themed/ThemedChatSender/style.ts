@@ -5,10 +5,10 @@ export const styles = StyleSheet.create({
     height: 60,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#5c7587",
+    backgroundColor: "#0e2f44",
   },
   senderInfoWrapper: {
-    width: "50%",
+    width: "70%",
     flexDirection: "row",
     alignItems: "center",
   },

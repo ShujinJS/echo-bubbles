@@ -4,7 +4,8 @@ export const styles = StyleSheet.create({
   chatInputContainer: {
     width: "100%",
     paddingVertical: 20,
-    backgroundColor: "#5c7587",
+    // marginVertical: 20,
+    backgroundColor: "#0e2f44",
   },
   chatInputWrapper: {
     width: "80%",
@@ -31,6 +32,6 @@ export const styles = StyleSheet.create({
   },
   sendBtnIcon: {
     fontSize: 20,
-    color: "#5c7587",
+    color: "#0e2f44",
   },
 });

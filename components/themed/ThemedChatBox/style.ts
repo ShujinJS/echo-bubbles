@@ -15,20 +15,19 @@ export const styles = (isSenderUser = false) =>
       paddingVertical: 5,
       paddingHorizontal: 10,
       alignSelf: isSenderUser ? "flex-end" : "flex-start",
-      backgroundColor: isSenderUser ? "#016554" : "#5c7587",
+      backgroundColor: isSenderUser ? "#016554" : "#0e2f44",
       borderRadius: 20,
       boxShadow:
         "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px",
     },
     chatMessage: {
-      color: "#fff",
-
       fontSize: 16,
       padding: 10,
+      color: "#fff",
     },
     senderWrapper: {
       alignItems: "center",
-      marginBottom: 15,
+      marginBottom: 8,
       flexDirection: isSenderUser ? "row-reverse" : "row",
     },
     senderImage: {
