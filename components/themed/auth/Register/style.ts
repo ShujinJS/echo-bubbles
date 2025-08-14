@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
   authBtn: {
     width: "100%",
     padding: 5,
-    borderRadius: 10,
+    borderRadius: 5,
     backgroundColor: "gray",
   },
 });

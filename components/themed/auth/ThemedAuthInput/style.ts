@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
   inputWrapper: {},
   authInput: {
     padding: 10,
-    marginBottom: 10,
+    marginBottom: 20,
     borderWidth: 3,
     borderRadius: 20,
     borderColor: "#ecdce1",

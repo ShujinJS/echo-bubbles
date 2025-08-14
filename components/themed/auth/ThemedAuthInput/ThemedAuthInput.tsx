@@ -1,10 +1,11 @@
 import { ThemedText } from "@/components/ThemedText";
 import { useThemeColor } from "@/hooks/useThemeColor";
-import { useState } from "react";
 import { SafeAreaView, TextInput, View } from "react-native";
 import { styles } from "./style";
 
 export interface ThemedAuthInputProps {
+  value: string;
+  onValueChange: (param: string) => void;
   lightColor?: string;
   darkColor?: string;
   inputLabel: string;
@@ -14,6 +15,8 @@ export interface ThemedAuthInputProps {
 }
 
 export function ThemedAuthInput({
+  value,
+  onValueChange,
   lightColor,
   darkColor,
   inputLabel,
@@ -22,7 +25,6 @@ export function ThemedAuthInput({
   isMasked = false,
 }: ThemedAuthInputProps) {
   const color = useThemeColor({ light: lightColor, dark: darkColor }, "text");
-  const [inputText, setInputText] = useState("");
 
   return (
     <SafeAreaView style={styles.authInputContainer}>
@@ -34,18 +36,14 @@ export function ThemedAuthInput({
           <TextInput
             keyboardType={inputType}
             style={[{ color }, styles.authInput]}
-            value={inputText}
-            onChangeText={setInputText}
+            value={value}
+            onChangeText={onValueChange}
             placeholder={inputPlaceholder}
             autoCapitalize={isMasked ? "none" : "sentences"}
             secureTextEntry={isMasked}
             autoCorrect={isMasked}
           />
         </View>
-
-        {/* <Pressable style={styles.sendBtn} onPress={handleSendMessage}>
-          <Text style={styles.sendBtnIcon}>+</Text>
-        </Pressable> */}
       </View>
     </SafeAreaView>
   );

@@ -9,6 +9,8 @@ import "react-native-reanimated";
 import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+// Tanstack Query
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // Hooks
 import { useColorScheme } from "@/hooks/useColorScheme";
 import AuthProvider from "../context/AuthContext";
@@ -19,17 +21,23 @@ export default function RootLayout() {
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
 
+  const queryClient = new QueryClient();
+
   if (!loaded) {
     // Async font loading only occurs in development.
     return null;
   }
 
   return (
-    <AuthProvider>
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <Slot />
-        <StatusBar style="auto" />
-      </ThemeProvider>
-    </AuthProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <ThemeProvider
+          value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+        >
+          <Slot />
+          <StatusBar style="auto" />
+        </ThemeProvider>
+      </AuthProvider>
+    </QueryClientProvider>
   );
 }

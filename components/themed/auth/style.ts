@@ -11,6 +11,6 @@ export const styles = StyleSheet.create({
     width: "70%",
     padding: 20,
     borderRadius: 20,
-    boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
+    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
   },
 });
